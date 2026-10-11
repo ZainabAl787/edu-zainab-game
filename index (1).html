@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#3d5fe8" />
+<title>EDU.ZAINAB@ — School & Toy Adventure</title>
+<style>
+:root{--ink:#20305c;--blue:#4361ee;--pink:#ff6e9f;--yellow:#ffd65a;--mint:#8fe3c3;--cream:#fffaf0;--panel:#ffffffee;--shadow:0 14px 40px #25376d25}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:ui-rounded,"Trebuchet MS",system-ui,-apple-system,sans-serif;color:var(--ink);background:#eaf4ff}body{min-height:100dvh;background:radial-gradient(circle at 10% 10%,#fff8dd 0,transparent 28%),linear-gradient(145deg,#d8efff,#f8ecff 55%,#e3fff2);padding:clamp(8px,2.3vw,22px);display:flex;justify-content:center;align-items:flex-start}.app{width:min(1200px,100%);margin:auto}.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px;padding:3px 2px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:10px}.brand-bubble{width:48px;height:48px;border-radius:16px;background:linear-gradient(145deg,#7a7bff,#4e58d9);display:grid;place-items:center;color:white;font-size:25px;box-shadow:0 7px 0 #343fa1;transform:rotate(-3deg)}.brand strong{display:block;font-size:clamp(17px,2.6vw,23px);letter-spacing:.3px}.brand small{display:block;color:#62749b;font-weight:800;letter-spacing:1.4px;font-size:10px;margin-top:2px}.lesson-tag{border:2px solid #fff;background:#ffffffb8;padding:9px 14px;border-radius:999px;font-size:12px;font-weight:900;box-shadow:0 4px 12px #6578ab12}.panel{background:var(--panel);border:2px solid #fff;border-radius:27px;box-shadow:var(--shadow);overflow:hidden}.hud{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;padding:12px 16px;background:#fffdf7;border-bottom:2px solid #edf0ff}.hud-left,.hud-right{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.hud-right{justify-content:flex-end}.pill{display:flex;align-items:center;gap:6px;background:#f1f3ff;border-radius:14px;padding:8px 11px;font-size:13px;font-weight:900;white-space:nowrap}.pill .num{color:#4358d7;font-size:17px}.hearts{letter-spacing:2px;font-size:20px;white-space:nowrap}.progress{text-align:center;font-weight:1000;font-size:12px;letter-spacing:.7px;color:#617197}.progress b{color:#4557db;font-size:16px}.sound{border:0;border-radius:12px;background:#eaf8f2;color:#167753;font:inherit;font-size:12px;font-weight:900;padding:10px 12px;cursor:pointer}.sound:focus-visible,.primary:focus-visible,.choice:focus-visible,.ctrl:focus-visible{outline:4px solid #ffba42;outline-offset:3px}.game-wrap{position:relative;background:#9be3ff}.game-stage{position:relative;width:100%;aspect-ratio:16/9;min-height:300px;max-height:650px;overflow:hidden;background:linear-gradient(#85d9ff,#e3fbff 77%,#c4f4c7);touch-action:pan-y}.game-stage canvas{display:block;width:100%;height:100%;image-rendering:auto}.stage-tip{position:absolute;left:14px;top:12px;background:#fffdf0e8;border:2px solid white;padding:7px 10px;border-radius:12px;font-weight:900;font-size:11px;color:#58688f;pointer-events:none}.key-hint{position:absolute;right:14px;top:12px;background:#fffdf0e8;border:2px solid white;padding:7px 10px;border-radius:12px;font-size:10px;font-weight:900;color:#58688f;pointer-events:none}.controls{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 16px;background:#fffdf7;border-top:2px solid #edf0ff}.move-controls{display:flex;gap:9px}.ctrl{width:54px;height:48px;border:0;border-radius:16px;background:#e9edff;box-shadow:0 4px 0 #c2c9fb;color:#3549c2;font-size:24px;font-weight:1000;cursor:pointer;touch-action:none;user-select:none}.ctrl.jump{width:100px;background:#ffe8a2;box-shadow:0 4px 0 #efca64;color:#875a00;font-size:14px}.ctrl:active{transform:translateY(3px);box-shadow:0 1px 0 #c2c9fb}.controls-note{font-weight:800;color:#8290ad;font-size:11px;text-align:right;line-height:1.4}.overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:18px;background:#26377642;backdrop-filter:blur(4px);z-index:4}.overlay.hidden{display:none}.dialog{width:min(540px,100%);max-height:95%;overflow:auto;background:#fffdf8;border:4px solid #fff;border-radius:27px;box-shadow:0 18px 45px #28366c40;padding:clamp(18px,3vw,28px);text-align:center;position:relative}.eyebrow{display:inline-block;background:#e8edff;color:#4e5bcd;border-radius:999px;padding:6px 11px;font-size:11px;font-weight:1000;letter-spacing:1.3px}.dialog h1,.dialog h2{margin:11px 0 8px;font-size:clamp(25px,4vw,37px);line-height:1.08;color:#27356a}.dialog p{color:#69799b;line-height:1.45;font-weight:700;margin:9px 0 17px}.hero-icons{font-size:clamp(32px,5vw,50px);letter-spacing:4px;margin:12px 0}.primary{border:0;border-radius:16px;background:linear-gradient(135deg,#5368f4,#7e62ec);box-shadow:0 6px 0 #343fa8;color:white;padding:14px 24px;font:inherit;font-weight:1000;font-size:16px;cursor:pointer;min-width:175px}.primary:active{transform:translateY(3px);box-shadow:0 2px 0 #343fa8}.mini-note{font-size:11px!important;margin-bottom:0!important}.question-art{margin:12px auto 10px;display:grid;place-items:center;width:84px;height:76px;border-radius:23px;background:linear-gradient(145deg,#e6f7ff,#fff0f5);border:2px solid white;box-shadow:0 7px 20px #7186cb20;font-size:46px}.question-prompt{font-size:clamp(17px,2.5vw,22px);font-weight:1000;color:#293568;margin:8px 0 14px!important}.choices{display:grid;grid-template-columns:1fr;gap:9px}.choice{border:2px solid #e2e7ff;background:#fff;border-radius:14px;padding:12px 14px;font:inherit;font-size:15px;font-weight:900;color:#33416f;cursor:pointer;text-align:center;min-height:46px}.choice:hover{background:#f0f3ff;border-color:#8e9bff}.choice.correct{background:#d8f9e8;border-color:#37bd83;color:#176644}.choice.wrong{background:#ffe3e8;border-color:#ff7190;color:#9a2946}.feedback{min-height:23px;font-weight:900;font-size:13px;margin:10px 0 0!important}.feedback.good{color:#118255}.feedback.bad{color:#d44967}.dialog-actions{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}.secondary{border:2px solid #e1e5ff;border-radius:13px;background:#fff;padding:10px 14px;color:#55628b;font:inherit;font-weight:900;cursor:pointer}.legend{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:10px;font-size:11px;font-weight:900;color:#68789b}.legend span{background:#ffffffb8;border:1px solid #fff;border-radius:99px;padding:7px 10px}.footer-note{text-align:center;color:#8a97b3;font-weight:800;font-size:10px;letter-spacing:.5px;margin:12px 0 0}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:650px){body{padding:7px}.topbar{margin-bottom:8px}.brand-bubble{width:40px;height:40px;border-radius:13px}.lesson-tag{padding:7px 10px;font-size:10px}.hud{grid-template-columns:1fr auto;padding:9px;gap:8px}.progress{grid-column:1/-1;grid-row:2}.hud-left,.hud-right{gap:6px}.pill{padding:6px 8px;font-size:11px}.pill .num{font-size:15px}.hearts{font-size:17px}.sound{padding:8px 9px}.game-stage{min-height:240px}.stage-tip{left:7px;top:7px;font-size:9px;padding:5px 7px}.key-hint{right:7px;top:7px;font-size:9px;padding:5px 7px}.controls{padding:10px;gap:8px}.ctrl{width:47px;height:44px;border-radius:13px}.ctrl.jump{width:80px;font-size:12px}.controls-note{font-size:9px}.dialog{padding:16px;border-radius:21px}.question-art{width:67px;height:62px;font-size:38px}.question-prompt{margin-bottom:10px!important}.choice{padding:10px;min-height:42px;font-size:14px}.overlay{padding:8px}}
+@media(max-height:560px) and (orientation:landscape){body{padding:4px}.topbar{display:none}.game-stage{max-height:calc(100dvh - 130px);min-height:220px}.panel{border-radius:15px}.hud{padding:5px 10px}.controls{padding:5px 10px}.ctrl{height:38px}.dialog{padding:12px}.question-art{margin:5px auto;width:53px;height:48px;font-size:30px}.dialog h2{font-size:23px}.question-prompt{margin:4px 0 7px!important}.choice{padding:7px;min-height:35px}}
+</style>
+</head>
+<body>
+<main class="app">
+  <header class="topbar">
+    <div class="brand"><div class="brand-bubble" aria-hidden="true">★</div><div><strong>EDU.ZAINAB@</strong><small>PLAY • LEARN • SHINE</small></div></div>
+    <div class="lesson-tag">ENGLISH · TEST 1–2 · GRADE 1 · 1 A–B</div>
+  </header>
+  <section class="panel" aria-label="School and toy adventure game">
+    <div class="hud">
+      <div class="hud-left"><div class="pill"><span aria-hidden="true">💗</span><span class="hearts" id="hearts" aria-label="3 lives">♥ ♥ ♥</span></div><div class="pill"><span aria-hidden="true">⭐</span><span>Stars <b class="num" id="starCount">0</b></span></div></div>
+      <div class="progress">CLOUDS <b id="progress">0</b> / 6</div>
+      <div class="hud-right"><button class="sound" id="soundButton" type="button" aria-pressed="true">♫ Sound: On</button></div>
+    </div>
+    <div class="game-wrap">
+      <div class="game-stage" id="stage">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="A colorful side-scrolling platform game. Use the on-screen arrows and jump button, or keyboard arrows and spacebar." role="img"></canvas>
+        <div class="stage-tip">FIND THE 6 QUESTION CLOUDS ☁️</div>
+        <div class="key-hint">← → MOVE · SPACE JUMP</div>
+        <div class="overlay" id="startOverlay">
+          <div class="dialog">
+            <span class="eyebrow">ENGLISH • TEST 1–2</span>
+            <div class="hero-icons" aria-hidden="true">🎒 📚 🪁 🧸</div>
+            <h1>School & Toy Adventure!</h1>
+            <p>Run, jump, collect stars, and answer the six cloudy questions. Watch out for mushrooms!</p>
+            <button class="primary" id="playButton" type="button">LET’S PLAY! ▶</button>
+            <p class="mini-note">3 lives · 6 questions · Lots of fun</p>
+          </div>
+        </div>
+        <div class="overlay hidden" id="questionOverlay" role="dialog" aria-modal="true" aria-labelledby="questionTitle">
+          <div class="dialog">
+            <span class="eyebrow" id="questionEyebrow">CLOUD 1 OF 6</span>
+            <div class="question-art" id="questionArt" aria-hidden="true">🔤</div>
+            <h2 id="questionTitle">LETTER MATCH</h2>
+            <p class="question-prompt" id="questionPrompt">Match the capital letters.</p>
+            <div class="choices" id="choices"></div>
+            <p class="feedback" id="feedback" aria-live="polite"></p>
+            <div class="dialog-actions"><button class="secondary" id="continueButton" type="button" hidden>CONTINUE ▶</button></div>
+          </div>
+        </div>
+        <div class="overlay hidden" id="endOverlay" role="dialog" aria-modal="true" aria-labelledby="endTitle">
+          <div class="dialog">
+            <div class="hero-icons" id="endArt" aria-hidden="true">🏆 ⭐ 🏆</div>
+            <span class="eyebrow" id="endEyebrow">MISSION COMPLETE</span>
+            <h2 id="endTitle">YOU DID IT!</h2>
+            <p id="endMessage">You answered all six questions!</p>
+            <div class="pill" style="justify-content:center;margin:0 auto 18px;width:max-content"><span>⭐</span><span>Stars collected: <b class="num" id="finalStars">0</b></span></div>
+            <button class="primary" id="restartButton" type="button">PLAY AGAIN ↻</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="controls">
+      <div class="move-controls" aria-label="Movement controls">
+        <button class="ctrl" id="leftButton" type="button" aria-label="Move left">◀</button>
+        <button class="ctrl" id="rightButton" type="button" aria-label="Move right">▶</button>
+        <button class="ctrl jump" id="jumpButton" type="button" aria-label="Jump">⬆ JUMP</button>
+      </div>
+      <div class="controls-note">TOUCH CONTROLS<br>or use your keyboard</div>
+    </div>
+  </section>
+  <div class="legend"><span>⭐ Collect stars</span><span>🍄 Avoid mushrooms</span><span>☁️ Answer questions</span><span>💗 3 lives</span></div>
+  <p class="footer-note">MADE FOR GRADE 1 · ENGLISH LEARNING ADVENTURE · EDU.ZAINAB@</p>
+</main>
+<script>
+'use strict';
+/* EASY TO EXTEND: add or edit question objects in QUESTION_BANK. Keep exactly three choices. */
+const QUESTION_BANK = [
+  {title:'CAPITAL & SMALL LETTERS',art:'🔤',prompt:'Choose the lowercase letters that match A B C D E F G.',choices:['a b c d e f g','a b c d e f h','A B C D E F G'],answer:0,explain:'Great! A matches a, B matches b, all the way to G and g.'},
+  {title:'SCHOOL WORDS',art:'🎒',prompt:'What is this?',choices:['a bag','a kite','a book'],answer:0,explain:'Yes! This is a bag.'},
+  {title:'TOY WORDS',art:'🧸',prompt:'What is this toy?',choices:['a robot','a teddy','a pencil'],answer:1,explain:'Correct! It is a teddy.'},
+  {title:'A OR AN?',art:'🥚',prompt:'Complete the phrase: ___ egg.',choices:['A','AN','THE'],answer:1,explain:'Wonderful! We say “an egg.”'},
+  {title:'THIS IS A KITE',art:'🪁',prompt:'Choose the correct sentence.',choices:['This is a kite.','This is a book.','This is a robot.'],answer:0,explain:'Yes! This is a kite.'},
+  {title:'YES OR NO?',art:'🤖',prompt:'Look at the picture. Is this a kite?',choices:["Yes, it is.","No, it isn’t.",'This is a kite.'],answer:1,explain:'That’s right! No, it isn’t. It is a robot.'}
+];
+const $ = id => document.getElementById(id);
+const canvas = $('gameCanvas'), ctx = canvas.getContext('2d');
+const W = 960, H = 540, WORLD_W = 4550, GROUND_Y = 464;
+let running=false, paused=false, frame=0, lastTime=0, cameraX=0, lives=3, stars=0, answered=new Set(), activeQuestion=-1, soundOn=true, audioCtx=null, musicTimer=null, musicStep=0, invulnerable=0, endState='';
+const keys={left:false,right:false,jump:false};
+const player={x:70,y:GROUND_Y-58,w:38,h:56,vx:0,vy:0,onGround:true,facing:1,walk:0};
+const clouds=[{x:540,y:322},{x:1180,y:286},{x:1810,y:316},{x:2470,y:275},{x:3210,y:310},{x:3970,y:285}];
+const mushrooms=[{x:340,y:GROUND_Y-30,w:32,h:30},{x:850,y:GROUND_Y-30,w:34,h:30},{x:1450,y:GROUND_Y-30,w:35,h:30},{x:2110,y:GROUND_Y-30,w:34,h:30},{x:2785,y:GROUND_Y-30,w:34,h:30},{x:3510,y:GROUND_Y-30,w:35,h:30},{x:4260,y:GROUND_Y-30,w:34,h:30}];
+let starItems=[];
+function resetStars(){starItems=[];for(let x=170,i=0;x<WORLD_W-80;x+=145,i++){starItems.push({x,y: i%3===1?GROUND_Y-118:(i%3===2?GROUND_Y-76:GROUND_Y-55),got:false,twinkle:Math.random()*6.28});}}
+resetStars();
+function roundRect(c,x,y,w,h,r){c.beginPath();c.roundRect(x,y,w,h,r);c.fill();}
+function drawCloud(x,y,s=1){ctx.save();ctx.translate(x,y);ctx.scale(s,s);ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(-22,5,19,0,Math.PI*2);ctx.arc(0,-6,25,0,Math.PI*2);ctx.arc(24,5,18,0,Math.PI*2);ctx.fill();ctx.restore();}
+function drawStar(x,y,r,rot=0){ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.beginPath();for(let i=0;i<10;i++){let a=-Math.PI/2+i*Math.PI/5,rr=i%2===0?r:r*.46;ctx.lineTo(Math.cos(a)*rr,Math.sin(a)*rr);}ctx.closePath();ctx.fillStyle='#ffcc39';ctx.fill();ctx.lineWidth=2;ctx.strokeStyle='#fff8b0';ctx.stroke();ctx.restore();}
+function drawBackground(){
+ const sky=ctx.createLinearGradient(0,0,0,H);sky.addColorStop(0,'#83d8ff');sky.addColorStop(.73,'#d9f9ff');sky.addColorStop(1,'#b8edc4');ctx.fillStyle=sky;ctx.fillRect(0,0,W,H);
+ // soft distant hills
+ for(let layer=0;layer<3;layer++){ctx.fillStyle=['#a3e7d0','#83d9aa','#71ce91'][layer];ctx.beginPath();ctx.moveTo(0,390+layer*28);for(let x=-60;x<=W+70;x+=70){ctx.quadraticCurveTo(x+35,340+layer*30+Math.sin((x+cameraX*.12)/90)*20,x+70,390+layer*28);}ctx.lineTo(W,H);ctx.lineTo(0,H);ctx.fill();}
+ for(let i=0;i<9;i++){let x=((i*153-cameraX*.23)%(W+180)+W+180)%(W+180)-70;drawCloud(x,72+(i%3)*60,.7+(i%3)*.12);}
+ // far-off toy blocks / trees
+ for(let i=0;i<14;i++){let wx=i*380+90, sx=wx-cameraX*.62;if(sx<-90||sx>W+80)continue;ctx.fillStyle=i%2?'#64bd87':'#79c98a';ctx.beginPath();ctx.arc(sx,GROUND_Y-30,26,Math.PI,0);ctx.fill();ctx.fillRect(sx-5,GROUND_Y-32,10,33);}
+}
+function drawGround(){ctx.fillStyle='#65c982';ctx.fillRect(0,GROUND_Y,W,H-GROUND_Y);ctx.fillStyle='#3cae72';ctx.fillRect(0,GROUND_Y,W,9);ctx.fillStyle='#a3eaa2';for(let x=0;x<W;x+=36){let wx=x+cameraX;if(Math.floor(wx/36)%2===0){ctx.beginPath();ctx.moveTo(x,GROUND_Y+17);ctx.lineTo(x+5,GROUND_Y+9);ctx.lineTo(x+8,GROUND_Y+18);ctx.fill();}}
+ // dotted stepping path
+ ctx.fillStyle='#f6dca6';for(let x=0;x<WORLD_W;x+=115){let sx=x-cameraX;if(sx>-10&&sx<W+10){ctx.beginPath();ctx.ellipse(sx,GROUND_Y+35,15,5,0,0,Math.PI*2);ctx.fill();}}
+}
+function drawToyDecor(){for(let i=0;i<12;i++){let wx=250+i*390,sx=wx-cameraX;if(sx<-45||sx>W+45)continue;ctx.save();ctx.translate(sx,GROUND_Y-5);ctx.fillStyle=['#ff8eaa','#ffd65a','#8d9aff'][i%3];roundRect(ctx,-13,-31,26,26,5);ctx.fillStyle='#fff';ctx.fillRect(-5,-25,10,3);ctx.fillRect(-2,-29,4,12);ctx.restore();}}
+function drawQuestionClouds(){clouds.forEach((q,i)=>{let sx=q.x-cameraX;if(sx<-100||sx>W+100)return;let done=answered.has(i);ctx.save();ctx.translate(sx,q.y);ctx.shadowColor='#4971a633';ctx.shadowBlur=done?0:10;ctx.fillStyle=done?'#c8f5d9':'#fff';ctx.beginPath();ctx.arc(-25,5,21,0,Math.PI*2);ctx.arc(0,-8,29,0,Math.PI*2);ctx.arc(28,6,21,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;ctx.strokeStyle=done?'#4ac58c':'#fff';ctx.lineWidth=4;ctx.stroke();ctx.fillStyle=done?'#138255':'#5261d9';ctx.font='1000 22px system-ui';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText(done?'✓':String(i+1),0,0);ctx.fillStyle='#4f6194';ctx.font='900 11px system-ui';ctx.fillText(done?'GREAT!':'QUESTION',0,43);ctx.restore();});}
+function drawStars(){starItems.forEach(s=>{if(s.got)return;let sx=s.x-cameraX;if(sx<-25||sx>W+25)return;let bob=Math.sin(frame*.06+s.twinkle)*3;drawStar(sx,s.y+bob,12,frame*.015+s.twinkle);});}
+function drawMushrooms(){mushrooms.forEach(m=>{let sx=m.x-cameraX;if(sx<-50||sx>W+50)return;ctx.save();ctx.fillStyle='#fff0c9';ctx.fillRect(sx-4,m.y+13,8,16);ctx.fillStyle='#ed597e';ctx.beginPath();ctx.arc(sx,m.y+13,17,Math.PI,0);ctx.lineTo(sx+17,m.y+16);ctx.quadraticCurveTo(sx,m.y+24,sx-17,m.y+16);ctx.fill();ctx.fillStyle='white';ctx.beginPath();ctx.arc(sx-7,m.y+7,3.5,0,Math.PI*2);ctx.arc(sx+6,m.y+5,3,0,Math.PI*2);ctx.fill();ctx.restore();});}
+/* Vector mascot is a friendly temporary student sprite. Replace drawCharacter() with an image sprite when the student's character photo is supplied. */
+function drawCharacter(){const sx=player.x-cameraX, sy=player.y;ctx.save();ctx.translate(sx+player.w/2,sy+player.h/2);if(player.facing<0)ctx.scale(-1,1);if(invulnerable>0&&Math.floor(frame/4)%2===0)ctx.globalAlpha=.4;let step=player.onGround?Math.sin(player.walk)*4:0;
+ // backpack
+ ctx.fillStyle='#ffbd57';roundRect(ctx,-18,-1,12,25,5);
+ // legs and shoes
+ ctx.fillStyle='#4053aa';ctx.fillRect(-10,15,8,17+Math.max(0,step));ctx.fillRect(3,15,8,17+Math.max(0,-step));ctx.fillStyle='#ff6c91';roundRect(ctx,-14,43+Math.max(0,step),15,7,4);roundRect(ctx,1,43+Math.max(0,-step),15,7,4);
+ // shirt
+ ctx.fillStyle='#7d6af3';ctx.beginPath();ctx.moveTo(-13,-5);ctx.quadraticCurveTo(0,-12,13,-5);ctx.lineTo(15,20);ctx.lineTo(-14,20);ctx.closePath();ctx.fill();ctx.fillStyle='#fff';ctx.fillRect(-2,-5,4,16);
+ // face/head
+ ctx.fillStyle='#8f573a';ctx.beginPath();ctx.arc(0,-18,18,0,Math.PI*2);ctx.fill();ctx.fillStyle='#e9ad7f';ctx.beginPath();ctx.arc(0,-17,14,0,Math.PI*2);ctx.fill();
+ // hair
+ ctx.fillStyle='#563a3c';ctx.beginPath();ctx.arc(0,-23,16,Math.PI,Math.PI*2);ctx.lineTo(16,-14);ctx.quadraticCurveTo(9,-19,7,-25);ctx.quadraticCurveTo(-4,-16,-15,-18);ctx.closePath();ctx.fill();ctx.fillStyle='#563a3c';ctx.beginPath();ctx.arc(-14,-13,6,0,Math.PI*2);ctx.fill();
+ // face details
+ ctx.fillStyle='#2a365b';ctx.beginPath();ctx.arc(-5,-17,1.8,0,Math.PI*2);ctx.arc(5,-17,1.8,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#9b4f48';ctx.lineWidth=1.7;ctx.beginPath();ctx.arc(0,-13,4,0.15,Math.PI-.15);ctx.stroke();
+ // hair bow
+ ctx.fillStyle='#ff6f9d';ctx.beginPath();ctx.moveTo(-8,-32);ctx.lineTo(-17,-39);ctx.lineTo(-16,-28);ctx.closePath();ctx.fill();ctx.beginPath();ctx.moveTo(-8,-32);ctx.lineTo(0,-40);ctx.lineTo(0,-29);ctx.closePath();ctx.fill();ctx.restore();}
+function drawWorld(){drawBackground();drawGround();drawToyDecor();drawStars();drawMushrooms();drawQuestionClouds();drawCharacter();}
+function setHud(){ $('hearts').textContent=Array.from({length:3},(_,i)=>i<lives?'♥':'♡').join(' ');$('hearts').setAttribute('aria-label',`${lives} lives remaining`);$('starCount').textContent=stars;$('progress').textContent=answered.size;}
+function unlockAudio(){if(!soundOn)return;try{if(!audioCtx)audioCtx=new(window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==='suspended')audioCtx.resume();}catch(e){}}
+function tone(freq=600,duration=.1,type='sine',volume=.055){if(!soundOn)return;unlockAudio();if(!audioCtx)return;try{const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=type;o.frequency.value=freq;g.gain.setValueAtTime(volume,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+duration);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+duration);}catch(e){}}
+function startMusic(){if(!soundOn||musicTimer)return;unlockAudio();const notes=[523.25,659.25,783.99,659.25,587.33,698.46,880,698.46,523.25,587.33,659.25,783.99];musicStep=0;musicTimer=setInterval(()=>{if(!running||paused||!soundOn)return;const n=notes[musicStep++%notes.length];tone(n,.19,'triangle',.018);},390);}
+function stopMusic(){if(musicTimer){clearInterval(musicTimer);musicTimer=null;}}
+function toggleSound(){soundOn=!soundOn;$('soundButton').textContent=`♫ Sound: ${soundOn?'On':'Off'}`;$('soundButton').setAttribute('aria-pressed',String(soundOn));if(soundOn){unlockAudio();startMusic();tone(660,.1);}else stopMusic();}
+function rectsOverlap(a,b){return a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;}
+function loseLife(reason){if(invulnerable>0||!running)return;lives--;invulnerable=95;tone(180,.23,'sawtooth',.07);setHud();player.vx=0;player.vy=-3;if(lives<=0){endGame(false,reason||'Oh no! You ran out of lives.');}}
+function checkWorldInteractions(){
+ for(const s of starItems){if(s.got)continue;const dx=(player.x+player.w/2)-s.x,dy=(player.y+player.h/2)-s.y;if(dx*dx+dy*dy<34*34){s.got=true;stars++;tone(850,.09,'sine');setHud();}}
+ for(const m of mushrooms){if(rectsOverlap({x:player.x+5,y:player.y+5,w:player.w-10,h:player.h-5},{x:m.x-12,y:m.y+3,w:m.w-2,h:m.h-2})){loseLife('A mushroom got in your way!');break;}}
+ if(activeQuestion<0&&running){for(let i=0;i<clouds.length;i++){if(!answered.has(i)&&Math.abs((player.x+player.w/2)-clouds[i].x)<47){openQuestion(i);break;}}}
+ if(player.x>WORLD_W-player.w-10&&answered.size===QUESTION_BANK.length)endGame(true);
+}
+function update(dt){if(!running||paused)return;frame++;if(invulnerable>0)invulnerable--;const slow=Math.min(dt/16.67,2);player.vx=0;if(keys.left){player.vx=-4.1;player.facing=-1;player.walk+=.18*slow;}if(keys.right){player.vx=4.1;player.facing=1;player.walk+=.18*slow;}player.x+=player.vx*slow;player.x=Math.max(0,Math.min(WORLD_W-player.w,player.x));if(keys.jump&&player.onGround){player.vy=-12.1;player.onGround=false;keys.jump=false;tone(390,.08);}player.vy+=.58*slow;player.y+=player.vy*slow;if(player.y+player.h>=GROUND_Y){player.y=GROUND_Y-player.h;player.vy=0;player.onGround=true;}if(player.y>H+50){loseLife('You fell off the path!');player.y=GROUND_Y-player.h;player.x=Math.max(0,player.x-100);}cameraX=Math.max(0,Math.min(WORLD_W-W,player.x-W*.31));checkWorldInteractions();}
+function loop(ts){if(!lastTime)lastTime=ts;const dt=Math.min(ts-lastTime,34);lastTime=ts;update(dt);drawWorld();if(running&&!paused)requestAnimationFrame(loop);}
+function beginLoop(){if(running&&!paused)requestAnimationFrame(loop);}
+function openQuestion(i){if(answered.has(i)||activeQuestion>=0)return;activeQuestion=i;paused=true;$('questionEyebrow').textContent=`CLOUD ${i+1} OF 6`;$('questionArt').textContent=QUESTION_BANK[i].art;$('questionTitle').textContent=QUESTION_BANK[i].title;$('questionPrompt').textContent=QUESTION_BANK[i].prompt;$('feedback').textContent='';$('feedback').className='feedback';$('continueButton').hidden=true;const box=$('choices');box.innerHTML='';QUESTION_BANK[i].choices.forEach((choice,j)=>{const b=document.createElement('button');b.type='button';b.className='choice';b.textContent=choice;b.addEventListener('click',()=>chooseAnswer(j,b));box.appendChild(b);});$('questionOverlay').classList.remove('hidden');$('choices').querySelector('button')?.focus();tone(520,.09);}
+function chooseAnswer(index,button){if(activeQuestion<0||answered.has(activeQuestion))return;const q=QUESTION_BANK[activeQuestion];const all=[...$('choices').querySelectorAll('button')];if(index===q.answer){answered.add(activeQuestion);all.forEach((b,i)=>{b.disabled=true;if(i===q.answer)b.classList.add('correct');});$('feedback').textContent='✓ '+q.explain;$('feedback').className='feedback good';$('continueButton').hidden=false;stars+=3;setHud();tone(740,.12);setTimeout(()=>tone(990,.16),100);}else{button.classList.add('wrong');button.disabled=true;lives--;setHud();tone(210,.18,'square',.05);if(lives<=0){$('feedback').textContent='No lives left. Let’s practise and try again!';$('feedback').className='feedback bad';setTimeout(()=>{if(lives<=0)endGame(false,'Keep practising! You can try again.');},750);return;}$('feedback').textContent='Not quite! Try another answer. ♥ -1 life';$('feedback').className='feedback bad';}}
+function continueFromQuestion(){if(activeQuestion<0)return;$('questionOverlay').classList.add('hidden');activeQuestion=-1;paused=false;setHud();if(answered.size===QUESTION_BANK.length){endGame(true);}else beginLoop();}
+function startGame(){unlockAudio();running=true;paused=false;frame=0;lastTime=0;lives=3;stars=0;answered=new Set();activeQuestion=-1;invulnerable=0;endState='';player.x=70;player.y=GROUND_Y-player.h;player.vx=0;player.vy=0;player.onGround=true;cameraX=0;resetStars();$('startOverlay').classList.add('hidden');$('questionOverlay').classList.add('hidden');$('endOverlay').classList.add('hidden');setHud();if(soundOn)startMusic();beginLoop();}
+function endGame(won,message=''){if(endState)return;endState=won?'win':'lose';running=false;paused=true;stopMusic();$('questionOverlay').classList.add('hidden');$('endOverlay').classList.remove('hidden');$('finalStars').textContent=stars;if(won){$('endArt').textContent='🏆 ⭐ 🎉';$('endEyebrow').textContent='MISSION COMPLETE';$('endTitle').textContent='YOU DID IT!';$('endMessage').textContent='Amazing work! You answered all six questions and finished the adventure!';tone(660,.15);setTimeout(()=>tone(830,.17),120);setTimeout(()=>tone(990,.22),250);}else{$('endArt').textContent='💪 📚 ⭐';$('endEyebrow').textContent='KEEP PRACTISING';$('endTitle').textContent='NICE TRY!';$('endMessage').textContent=message||'Every try helps you learn. Let’s play again!';}}
+function bindHold(button,prop){const down=e=>{e.preventDefault();keys[prop]=true;if(button.setPointerCapture&&e.pointerId!==undefined){try{button.setPointerCapture(e.pointerId);}catch(_){}}};const up=e=>{e.preventDefault();keys[prop]=false;};button.addEventListener('pointerdown',down);['pointerup','pointercancel','lostpointercapture','pointerleave'].forEach(ev=>button.addEventListener(ev,up));button.addEventListener('contextmenu',e=>e.preventDefault());}
+bindHold($('leftButton'),'left');bindHold($('rightButton'),'right');$('jumpButton').addEventListener('pointerdown',e=>{e.preventDefault();keys.jump=true;});$('jumpButton').addEventListener('click',e=>{if(e.detail===0)keys.jump=true;});
+window.addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp',' ','a','A','d','D','w','W'].includes(e.key))e.preventDefault();if(e.key==='ArrowLeft'||e.key==='a'||e.key==='A')keys.left=true;if(e.key==='ArrowRight'||e.key==='d'||e.key==='D')keys.right=true;if(e.key===' '||e.key==='ArrowUp'||e.key==='w'||e.key==='W')keys.jump=true;if(e.key==='Escape'&&activeQuestion>=0){/* questions intentionally stay open until answered */}});
+window.addEventListener('keyup',e=>{if(e.key==='ArrowLeft'||e.key==='a'||e.key==='A')keys.left=false;if(e.key==='ArrowRight'||e.key==='d'||e.key==='D')keys.right=false;if(e.key===' '||e.key==='ArrowUp'||e.key==='w'||e.key==='W')keys.jump=false;});
+$('soundButton').addEventListener('click',toggleSound);$('playButton').addEventListener('click',startGame);$('restartButton').addEventListener('click',startGame);$('continueButton').addEventListener('click',continueFromQuestion);
+// Draw an attractive scene behind the start screen, even before Play is pressed.
+drawWorld();setHud();
+// Small test hooks for browser smoke tests; gameplay itself remains user-driven.
+window.__EDU_ZAINAB_TEST__={getState:()=>({running,paused,lives,stars,answered:[...answered],activeQuestion,cameraX,playerX:player.x}),startGame,openQuestion,chooseAnswer,QUESTION_BANK};
+</script>
+</body>
+</html>
